@@ -1,0 +1,12 @@
+bookdown::gitbook:
+  css: css/style.css
+  split_by: "section"
+  config:
+    toc:
+      before: |
+        <li><a href="./">d3book companion</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Book made with bookdown</a></li>
+    edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
+
+

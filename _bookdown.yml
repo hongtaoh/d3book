@@ -1,0 +1,5 @@
+book_filename: "d3booktrial"
+language:
+  ui:
+    chapter_name: "Unit "
+delete_merged_file: true
