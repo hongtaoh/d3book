@@ -3,7 +3,6 @@ bookdown::gitbook:
   split_by: section
   config:
     toc:
-      collapse: none
       before: |
         <li><a href="./">d3book companion</a></li>
       after: |
