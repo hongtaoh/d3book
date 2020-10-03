@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6.1 Task 9-1 | B3book Companion</title>
+  <title>7.3 Unsolved Puzzles in Task 10 | B3book Companion</title>
   <meta name="description" content="This is Hongtao Hao’s notes on Scott Murray’s D3 Book" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6.1 Task 9-1 | B3book Companion" />
+  <meta property="og:title" content="7.3 Unsolved Puzzles in Task 10 | B3book Companion" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="hongtaoh/d3book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6.1 Task 9-1 | B3book Companion" />
+  <meta name="twitter:title" content="7.3 Unsolved Puzzles in Task 10 | B3book Companion" />
   
   <meta name="twitter:description" content="This is Hongtao Hao’s notes on Scott Murray’s D3 Book" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="task9.html"/>
-<link rel="next" href="task-9-2.html"/>
+<link rel="prev" href="task-10-review.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -236,50 +236,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="task-9-1" class="section level2">
-<h2><span class="header-section-number">6.1</span> Task 9-1</h2>
-<div id="from-day-20" class="section level3">
-<h3><span class="header-section-number">6.1.1</span> From <a href="https://observablehq.com/@hongtaoh/day-twenty-task-8-continued-2020-09-13">Day 20</a></h3>
-<ul>
-<li><p>9-1-1. Make a normal-looking bar chart for this dataset: [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13, 11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ]. Width and height of the SVG: 600, 250.<br />
-### From <a href="https://observablehq.com/@hongtaoh/day-twenty-one-task-9-continued-2020-09-14">Day 21</a></p></li>
-<li><p>9-1-2. Create an <code>xScale</code> using <code>d3.scaleBand()</code>. Let the output range be ([0, w]), and assign 5 percent of the bandwidth to spacing in between bands. Use this <code>xScale</code> when setting <code>x</code>, and <code>width</code> of each <code>rect</code> accordingly. <em>Hint</em> :</p>
-<ol style="list-style-type: decimal">
-<li><p>For <code>.domain()</code>, use <a href="https://github.com/d3/d3-array#range"><code>d3.range()</code></a>. For example, <code>range(10)</code> will produce <code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code>. <strong>Note</strong> that stop is exclusive.</p></li>
-<li><p><code>bandwidth()</code>.</p></li>
-</ol></li>
-<li><p>9-1-3. Put the text of corresponding data values right in the middle of the top of each bar. Think hard about how to set the <code>x</code> (<em>Hint</em> : You’ll need to use <code>xScale(i)</code>, and <code>xScale.bandwidht()</code>.</p></li>
-<li><p>9-1-4. Let the text “Click here” appear above the bar chart. When visitors click “Click here”, the text “Hey, don’t click that” will pop up.</p>
-<ul>
-<li><p><em>Hint</em> : Add a paragraph element before our javascript. Down at the end of our d3 code, select this new p, and add an <em>event listener</em> to the element. You’ll use the <code>alert()</code> function within a <code>on</code> function.</p></li>
-<li><p>What is an <em>event listener</em>: an anonymous function that listens for an event on an element or elements.</p></li>
-<li><p>The <code>.on</code> method takes on two arguments: the event type, and the listener itself which is an anonymous function.</p></li>
-</ul></li>
-<li><p>9-1-5. Rather than generating the annoying pop-up text, updating the dataset. That is to say, after people click on the text, the bar chart will represent this updated dataset: <code>[11, 12, 15, 20, 18, 17, 16, 18, 23, 25, 5,10,13,19,21,25,22,18,15,13]</code>;</p></li>
-<li><p>9-1-6. Add transition to the bars heights.</p></li>
-<li><p>9-1-7. Let the transition last for 1 second. Now, we can see that labels did not have smooth transitions along with the bar heights. Add transition and duration to labels as well.</p></li>
-<li><p>9-1-8. Make the rate of motion be linear using the <code>ease()</code> function. <em>Hint</em> : <code>easeLinear</code>.</p></li>
-<li><p>9-1-9. Create a one second delay before each transition.</p></li>
-<li><p>9-1-10. Make the delay dynamic (so called “staggered delays”) such that each element is delayed 100 ms more than the preceding one.</p></li>
-</ul>
-</div>
-<div id="from-day-22" class="section level3">
-<h3><span class="header-section-number">6.1.2</span> From <a href="https://observablehq.com/@hongtaoh/day-twenty-two-spet-15th-2020">Day 22</a></h3>
-<ul>
-<li><p>9-1-11. Continue with 9-1-10. To scale the dynamic delay to the length of the dataset such that visitors need to wait for at most 1 second to see the last rect element move.</p>
-<ul>
-<li>Why? If we only have 25 data values, 9-1-10 might be okay. However, if we have 1000 data points, then visitors have to wait for a very long time to see the transition finish. Scaling the delay to the length of the data makes more sense.</li>
-</ul></li>
-</ul>
+<div id="unsolved-puzzles-in-task-10" class="section level2">
+<h2><span class="header-section-number">7.3</span> Unsolved Puzzles in Task 10</h2>
+<div id="puzzle-one-from-day-33httpsobservablehq.comhongtaohday-33-2020-09-26" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> Puzzle one from [Day 33]<a href="https://observablehq.com/@hongtaoh/day-33-2020-09-26" class="uri">https://observablehq.com/@hongtaoh/day-33-2020-09-26</a>()</h3>
+
 </div>
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="task9.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="task-9-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="task-10-review.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -310,7 +281,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/hongtaoh/d3book/edit/master/06-Task-9.Rmd",
+"link": "https://github.com/hongtaoh/d3book/edit/master/07-Task-10.Rmd",
 "text": "Edit"
 },
 "history": {

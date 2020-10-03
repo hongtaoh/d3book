@@ -64,4 +64,7 @@ svg.selectAll("g")
       
 - I tried the Scott Murray's [codes](https://github.com/scotthmurray/d3-book/blob/master/chapter_10/13_svg_tooltip.html) implementing SVG element tooltips, but they didn't work. [Here](https://github.com/scotthmurray/d3-book/issues/47) is the solution to this problem. 
 
+## Unsolved Puzzles in Task 10
+### Puzzle one from [Day 33]https://observablehq.com/@hongtaoh/day-33-2020-09-26()
+
 
