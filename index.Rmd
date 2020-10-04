@@ -17,4 +17,4 @@ D3 is hard, literally. Its learning curve is very steep. The key to mastering it
 
 Therefore, I documented the codes' objectives in the book, i.e., what the codes in the book aimed to achieve. Then I used these prompts to train myself. I found them useful so I decided to share these prompts through this website.
 
-If you can achieve all of what these prompts said, then you don't need to read the whole book again. 
+If you can achieve all of what these prompts asked you to do, then you don't need to read the whole book again. 
