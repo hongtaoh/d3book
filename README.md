@@ -1,1 +1,1 @@
-This website is based on Scott Murray's [*Interactive Data Visualization for the Web, 2nd Ed.*](https://alignedleft.com/work/d3-book-2e). The purpose of website is to provide prompts so that you can practice again and again, which is the key to mastering d3. 
+This website is based on Scott Murray's [*Interactive Data Visualization for the Web, 2nd Ed.*](https://alignedleft.com/work/d3-book-2e). The purpose of this website is to provide prompts by which you can practice coding in D3 again and again.  
