@@ -6,7 +6,7 @@ From [Day 8](https://observablehq.com/@hongtaoh/spet-1-2020-day-eight)
 - 6-1-1. Make a bar chart, in which the height of each bar corresponds to its data value. 
    - dataset = [5,10,15,20,25];
    
-   - Attributes of the CSS, `div.bar`: `inline-block`, set the width to be 20px, the height 75px, background color is teal;
+   - Attributes of the CSS, `div.bar`: `inline-block`, set the width to be `20px`, the height `75px`, and background color to be teal;
 
 - 6-1-2. Make the bar five times taller, and add some space (2px) between bars;
 
