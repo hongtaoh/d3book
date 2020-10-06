@@ -24,7 +24,7 @@
 <meta name="author" content="Hongtao Hao" />
 
 
-<meta name="date" content="2020-10-04" />
+<meta name="date" content="2020-10-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -242,7 +242,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Some points worth mentioning:</p>
 <ul>
 <li><p>You can write codes involving multiple variables by including them in curly brackets. If you don’t use curly brackets, you have to dedicate one cell to each variable. See <a href="https://observablehq.com/@hongtaoh/bar-chart-cell-by-cell">this example</a> if you don’t know what “dedicating one cell to each variable” means.</p></li>
-<li><p>In the book, you normally write <code>var w = 600</code>. In Observable, however, you need to write <code>const w = 600</code>. Don’t ask me why. If you are dedicating one cell to each variable, then you don’t need to write <code>const w = 600</code>. Don’t ask me why.</p></li>
+<li><p>In the book, you normally write <code>var w = 600</code>. However, now <code>let</code> and <code>const</code> are preferred. Read <a href="https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/">here</a> and <a href="https://hackernoon.com/js-var-let-or-const-67e51dbb716f">here</a> for explanations.</p></li>
 <li><p>To show the results, you need to use <code>return svg.node()</code>. Again, don’t ask me why.</p></li>
 <li><p>By the way, <code>d =&gt; yScale(d)</code> is simply short for <code>function(d) { return yScale(d) }</code>. Similarly, <code>(d, i) =&gt; xScale(i)</code> means <code>function(d, i) { return xScale(i)}</code></p></li>
 </ul>

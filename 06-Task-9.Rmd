@@ -148,7 +148,7 @@ Some points worth mentioning:
 
 - You can write codes involving multiple variables by including them in curly brackets. If you don't use curly brackets, you have to dedicate one cell to each variable. See [this example](https://observablehq.com/@hongtaoh/bar-chart-cell-by-cell) if you don't know what "dedicating one cell to each variable" means. 
 
-- In the book, you normally write `var w = 600`. In Observable, however, you need to write `const w = 600`. Don't ask me why. If you are dedicating one cell to each variable, then you don't need to write `const w = 600`. Don't ask me why. 
+- In the book, you normally write `var w = 600`. However, now `let` and `const` are preferred. Read [here](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/) and [here](https://hackernoon.com/js-var-let-or-const-67e51dbb716f) for explanations. 
 
 - To show the results, you need to use `return svg.node()`. Again, don't ask me why. 
 
