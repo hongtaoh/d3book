@@ -140,6 +140,8 @@ To make the changes more noticeable, change the color of the bar to red within w
 
 See more information about d3 band scales [here](https://github.com/d3/d3-scale#band-scales).
 
+### Puzzle four and five from [Day 45](https://observablehq.com/@hongtaoh/day-45-2020-10-07)
+
 ## Translating from D3 to Observable
 
 See [Day 27](https://observablehq.com/@hongtaoh/day-twenty-seven-2020-09-20)
