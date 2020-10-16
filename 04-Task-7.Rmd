@@ -92,7 +92,7 @@ From [Day 18](https://observablehq.com/@hongtaoh/day-eighteen-sept-11-2020)
 
     - My original understanding of **margin convention** is wrong. There isn't magic involved here. What `var margin = ({  })` does here is simply assign numbers to names, so that those numbers can be referred to by calling `margin.top`, `margin.left`.... 
     
-    - If the range of `yScale` was initially `[h, 0]`, do pay attention when you use margin convention. If you can do it right, you have clearly understood margi convention. *Hint* : **It should be `.range([h -  margin.bottom, margin.top])`**.
+    - If the range of `yScale` was initially `[h, 0]`, do pay attention when you use margin convention. If you can do it right, you have clearly understood margin convention. *Hint* : **It should be `.range([h -  margin.bottom, margin.top])`**.
     
     - Why is that we should use `.range([h -  margin.bottom, margin.top])` here? The domain here is ([0, the maximum of d[1]), and we want circles with smaller d[1] values appear at bottom, so the range should start from `h` something. Now, suppose `margin.top = 20`, and `margin.bottom = 40`. If we use `.range([h - margin.top, margin.bottom])`, then `0` in the input domain will become `h -  margin.top`, and that will be the lowest point in our chart. Is this what we want? Not really. I want the lowest point to be at `h - margin.bottom`.
     

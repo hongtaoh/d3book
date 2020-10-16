@@ -24,7 +24,7 @@
 <meta name="author" content="Hongtao Hao" />
 
 
-<meta name="date" content="2020-10-08" />
+<meta name="date" content="2020-10-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -246,7 +246,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>7-5.</p>
 <ul>
 <li><p>My original understanding of <strong>margin convention</strong> is wrong. There isn’t magic involved here. What <code>var margin = ({  })</code> does here is simply assign numbers to names, so that those numbers can be referred to by calling <code>margin.top</code>, <code>margin.left</code>….</p></li>
-<li><p>If the range of <code>yScale</code> was initially <code>[h, 0]</code>, do pay attention when you use margin convention. If you can do it right, you have clearly understood margi convention. <em>Hint</em> : <strong>It should be <code>.range([h -  margin.bottom, margin.top])</code></strong>.</p></li>
+<li><p>If the range of <code>yScale</code> was initially <code>[h, 0]</code>, do pay attention when you use margin convention. If you can do it right, you have clearly understood margin convention. <em>Hint</em> : <strong>It should be <code>.range([h -  margin.bottom, margin.top])</code></strong>.</p></li>
 <li><p>Why is that we should use <code>.range([h -  margin.bottom, margin.top])</code> here? The domain here is ([0, the maximum of d[1]), and we want circles with smaller d[1] values appear at bottom, so the range should start from <code>h</code> something. Now, suppose <code>margin.top = 20</code>, and <code>margin.bottom = 40</code>. If we use <code>.range([h - margin.top, margin.bottom])</code>, then <code>0</code> in the input domain will become <code>h -  margin.top</code>, and that will be the lowest point in our chart. Is this what we want? Not really. I want the lowest point to be at <code>h - margin.bottom</code>.</p></li>
 </ul></li>
 </ul>
