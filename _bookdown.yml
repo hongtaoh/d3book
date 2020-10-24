@@ -1,6 +1,6 @@
 book_filename: "d3booktrial"
 repo: https://github.com/hongtaoh/d3book
-output_dir: _book
+output_dir: docs
 language:
   ui:
     edit: "Edit"
