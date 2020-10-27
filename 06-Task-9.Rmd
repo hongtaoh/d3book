@@ -3,10 +3,11 @@
 ## Task 9-1
 ### From [Day 20](https://observablehq.com/@hongtaoh/day-twenty-task-8-continued-2020-09-13)
 
-- 9-1-1. Make a normal-looking bar chart for this dataset: [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13, 11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ]. Width and height of the SVG: 600, 250.  
+- 9-1-1. Make a normal-looking bar chart for this dataset: `[ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13, 11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ]`. Width and height of the SVG: 600, 250.  
+
 ### From [Day 21](https://observablehq.com/@hongtaoh/day-twenty-one-task-9-continued-2020-09-14)
 
-- 9-1-2. Create an `xScale` using `d3.scaleBand()`. Let the output range be ([0, w]), and assign 5 percent of the bandwidth to spacing in between bands. Use this `xScale` when setting `x`, and `width` of each `rect` accordingly. *Hint* : 
+- 9-1-2. Create an `xScale` using `d3.scaleBand()`. Let the output range be `[0, w]`, and assign 5 percent of the bandwidth to spacing in between bands. Use this `xScale` when setting `x`, and `width` of each `rect` accordingly. *Hint* : 
   1. For `.domain()`, use [`d3.range()`](https://github.com/d3/d3-array#range). For example, `range(10)` will produce `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]`. **Note** that stop is exclusive. 
   
   2. `bandwidth()`. 
