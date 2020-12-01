@@ -1,0 +1,1286 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+  \usepackage{amssymb}
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={B3book Companion},
+  pdfauthor={Hongtao Hao},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+
+\newenvironment{rmdblock}[1]
+  {
+  \begin{itemize}
+  \renewcommand{\labelitemi}{
+    \raisebox{-.7\height}[0pt][0pt]{
+      {\setkeys{Gin}{width=3em,keepaspectratio}\includegraphics{images/#1}}
+    }
+  }
+  \setlength{\fboxsep}{1em}
+  \begin{kframe}
+  \item
+  }
+  {
+  \end{kframe}
+  \end{itemize}
+  }
+\newenvironment{rmdnote}
+  {\begin{rmdblock}{note}}
+  {\end{rmdblock}}
+\newenvironment{rmdcaution}
+  {\begin{rmdblock}{caution}}
+  {\end{rmdblock}}
+\newenvironment{rmdimportant}
+  {\begin{rmdblock}{important}}
+  {\end{rmdblock}}
+\newenvironment{rmdtip}
+  {\begin{rmdblock}{tip}}
+  {\end{rmdblock}}
+\newenvironment{rmdwarning}
+  {\begin{rmdblock}{warning}}
+  {\end{rmdblock}}
+
+\usepackage{makeidx}
+\makeindex
+
+\urlstyle{tt}
+
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+
+\frontmatter
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{B3book Companion}
+\author{Hongtao Hao}
+\date{2020-12-01}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{why-did-i-build-this-website}{%
+\chapter*{Why did I build this website?}\label{why-did-i-build-this-website}}
+\addcontentsline{toc}{chapter}{Why did I build this website?}
+
+D3 is hard, literally. Its learning curve is not fun. The key to mastering it, I believe, is to \textbf{practice and keep practicing}. I found Scott Murray's \href{https://alignedleft.com/work/d3-book-2e}{D3 book} easy to understand, and very useful. To make the best of the book, however, it's very crucial to practice on your own, rather than just reading the book. Reading others' codes won't make you a good programmer.
+
+Therefore, I documented the codes' objectives in the book, i.e., what the codes in the book aimed to achieve. Then I used these prompts to train myself. I found them useful so I decided to share these prompts through this website.
+
+If you can achieve all of what these prompts asked you to do, then you don't need to read the whole book again.
+
+\mainmatter
+
+\hypertarget{chapter3_and_4}{%
+\chapter{Chapter 3 \& 4}\label{chapter3_and_4}}
+
+Some Key Points from Chapter 3 \& 4
+
+\begin{itemize}
+\item
+  What are HTML elements: \texttt{html}, \texttt{head}, hyperlinks, \texttt{title}, \texttt{body}, \texttt{h1}, \texttt{h2}, \texttt{h3}, \texttt{p}, \texttt{div}, \texttt{span}, \texttt{img}, \texttt{ul}, \texttt{ol}, \texttt{li}, \texttt{em}, \texttt{strong}, \texttt{a}
+\item
+  \texttt{\textless{}a\ href="Link\ here"\textgreater{}Content\ here\textless{}/a\textgreater{}}, where \texttt{href} stands for \textbf{hypertext reference};
+\item
+  Difference between \texttt{id} and \texttt{class}: each element can only have one \texttt{id} and each \texttt{id} can be used only once. In contrast, elements can have multiple \texttt{class}(separated by space), and each \texttt{class} can be used for multiple times.
+\item
+  Comments: ``\texttt{\textless{}!-\/-\ Comments\ here\ -\/-\textgreater{}}''
+\item
+  \textbf{DOM} stands for \emph{Document Object Model}, which refers to ``the hierarchical structure of HTML'' (p.50).
+\item
+  \textbf{CSS}: \emph{Cascading Style Sheets}. How to use CSS: Check \href{https://www.w3schools.com/html/html_css.asp}{here}.
+\item
+  In CSS, a child adopts the style of the parent.
+\item
+  \textbf{JavaScript}: Arrays, Objects, JSON (JavaScript Object Notation)
+\item
+  \textbf{SVG}: Scalable Vector Graphics
+\end{itemize}
+
+\hypertarget{task5}{%
+\chapter{Task 5}\label{task5}}
+
+From \href{https://observablehq.com/@hongtaoh/day-six}{Day 6}
+
+\begin{itemize}
+\item
+  5-1. generate a \texttt{dataset} made up of five numbers: 5, 10, 15, 20, 25;
+\item
+  5-2. generate five lines of texts, each line of text being ``New paragraph!'';
+\item
+  5-3. generate five lines of texts: ``I can count up to 5'', ``10'', \ldots{}
+\item
+  5-4. make all the five lines red;
+\item
+  5-5. make only lines in which the number is above 15 red, and all else lines black.
+\end{itemize}
+
+\hypertarget{task6}{%
+\chapter{Task 6: Drawing with Data}\label{task6}}
+
+\hypertarget{tasks-6-1}{%
+\section{Tasks 6-1}\label{tasks-6-1}}
+
+From \href{https://observablehq.com/@hongtaoh/spet-1-2020-day-eight}{Day 8}
+
+\begin{itemize}
+\item
+  6-1-1. Make a bar chart, in which the height of each bar corresponds to its data value.
+
+  \begin{itemize}
+  \item
+    dataset = {[}5,10,15,20,25{]};
+  \item
+    Attributes of the CSS, \texttt{div.bar}: \texttt{inline-block}, set the width to be \texttt{20px}, the height \texttt{75px}, and background color to be teal;
+  \end{itemize}
+\item
+  6-1-2. Make the bar five times taller, and add some space (2px) between bars;
+\item
+  6-1-3. Change the dataset to be made up of 25 random numbers that range from 0 to 30 (using \texttt{for} loop, \texttt{Math.random()}, and \texttt{.push()} );
+\item
+  6-1-4. Make all the random numbers whole numbers (using \texttt{Math.round()})
+\end{itemize}
+
+\hypertarget{task-6-2-drawing-svgs}{%
+\section{Task 6-2: Drawing SVGs}\label{task-6-2-drawing-svgs}}
+
+From \href{https://observablehq.com/@hongtaoh/spet-1-2020-day-eight}{Day 8}
+
+\begin{itemize}
+\item
+  6-2-1, dataset = {[}5, 10, 15, 20, 25{]}
+\item
+  6-2-2, Create a SVG within \texttt{\textless{}body\textgreater{}\textless{}/body\textgreater{}}; Set the width of the SVG to be 500, and the height to be 50;
+\item
+  6-2-3, \texttt{var\ svg\ =\ d3.select("body").append("svg")}, what does this line of code do?
+\item
+  6-2-4, Draw five circles, the x-pistion value of each circle's center is (index * 50) + 25, the y-position is half of the pre-defined height, and the value of the radius is the data value itself;
+\item
+  6-2-5, Fill the five circles with ``yellow'', the stroke being ``orange'', and the stroke width is half of the corresponding data values;
+\item
+  6-2-6, Delete all the above codes except for the \texttt{div.bar\{\}} CSS styling, and then set the dataset to be \texttt{{[}\ 5,\ 10,\ 13,\ 19,\ 21,\ 25,\ 22,\ 18,\ 15,\ 13,11,\ 12,\ 15,\ 20,\ 18,\ 17,\ 16,\ 18,\ 23,\ 25\ {]}}, generate \texttt{n} number of divs before the enclosing tag of \texttt{\textless{}body\textgreater{}}(n = the length of the above dataset; and yes, you still need the CSS between \texttt{\textless{}head\textgreater{}\ and\ \textless{}/head\textgreater{}}), give it a class named as ``bar''. The height of each bar is five timees the corresponding data values. Attributions of the CSS, \texttt{div.bar}: inline-block, set the width to be 20px, the height 75px, background color is teal, and create a 2px margin between bars.
+\end{itemize}
+
+\hypertarget{task-6-3-draw-a-new-svg-chart}{%
+\section{Task 6-3: Draw a new SVG chart}\label{task-6-3-draw-a-new-svg-chart}}
+
+From \href{https://observablehq.com/@hongtaoh/spet-1-2020-day-eight}{Day 8}
+
+\begin{itemize}
+\item
+  6-3-1. Still use the above dataset with 20 data values;
+\item
+  6-3-2. Insert a new \texttt{SVG\textbackslash{}} between \texttt{\textless{}body\textgreater{}} and \texttt{\textless{}/body\textgreater{}}. Set the width of the SVG to be 500 and the height 100 pixels;
+\item
+  6-3-3. Now, instead of creating \texttt{divs}, we'll be creating \texttt{rect} s. Create 20 \texttt{rect} s, each with x =0, y=0, width = 20, height = 100;
+\item
+  6-3-4. Set the \texttt{x} to be dynamic, such that the ith rect has a x of \texttt{i*21};
+\item
+  6-3-5. Set the \texttt{x} to be flexible, such that each x = i * (w / dataset.length); Set the \texttt{width} of each rect to be flexible as well, each \texttt{width\ =\ w\ /\ dataset.length\ -\ 1};
+\item
+  6-3-6. Try to set the height of each rect to be the corresponding data value;
+\item
+  6-3-7. Set the top of each bar to be \texttt{h-d} and the height of each bar to be the corresponding data value;
+\item
+  6-3-8. Change \texttt{d} to be \texttt{d\ *\ 4};
+\item
+  6-3-9. Chagee the bar color to \texttt{teal}.
+\end{itemize}
+
+\hypertarget{task-6-4-change-bar-color}{%
+\section{Task 6-4: Change bar color}\label{task-6-4-change-bar-color}}
+
+From \href{https://observablehq.com/@hongtaoh/day-nine-spet-2-2020}{Day 9}
+
+\begin{itemize}
+\item
+  Based on Task 6-3, change the color of the bars using RGB. Let red and green components be fixed at zero. Let the blue component be the corresponding data value times 10, which then is rounded to the nearest whole number (using \texttt{Math.round()})
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{I still do not understand why we should put the codes in between \texttt{"+\ +"}. This is so difficult for me}.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{task-6-5-adjust-labels}{%
+\section{Task 6-5: Adjust labels}\label{task-6-5-adjust-labels}}
+
+From \href{https://observablehq.com/@hongtaoh/day-nine-spet-2-2020}{Day 9}
+
+\begin{itemize}
+\item
+  6-5-1. Add value labels on top of each bar;
+\item
+  6-5-2. Move each value label down by 15 pixels and to the right by 5 pixels; Style the font. Use sans-serif, 11px, and in white.
+\end{itemize}
+
+\hypertarget{task-6-6-draw-a-scatterplot}{%
+\section{Task 6-6: Draw a scatterplot}\label{task-6-6-draw-a-scatterplot}}
+
+From \href{https://observablehq.com/@hongtaoh/day-ten-sept-3rd-2020}{Day 10}
+
+\begin{itemize}
+\item
+  6-6-1. First, create a SVG element before the enclosing tag of \texttt{\textless{}body\textgreater{}}. Set the width of the svg to be 500, and the height 100. Dataset = {[} {[}5, 20{]}, {[}480, 90{]}, {[}250, 50{]}, {[}100, 33{]}, {[}330, 95{]}, {[}410, 12{]}, {[}475, 44{]}, {[}25, 67{]}, {[}85, 21{]}, {[}220, 88{]} {]}. In each hard bracket, the first number is the x, and the second the y. Draw a scatterplot of all these data points. Basically, you are expected to draw small circles. \texttt{cx} and \texttt{cy} are the above data points. Set the radius to be 5 pixels.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In the above \texttt{dataset}, \texttt{dataset{[}2{]}{[}0{]}\ =\ 480}
+  \end{itemize}
+\item
+  6-6-2. Label each data point in the format of \texttt{d{[}0{]},\ d{[}1{]}}. Place each label right beside each data point (just use d{[}0{]} as x, and d{[}1{]} as y will do the job). Please note here that \texttt{text} can both be an SVG element and a D3 method.
+\end{itemize}
+
+\emph{Chapter Six, Drawing the data} is finally over. We'll begin learning \textbf{scales}. p.117
+
+\hypertarget{task-6-review}{%
+\section{Task 6 Review}\label{task-6-review}}
+
+\hypertarget{task-6-1-review}{%
+\subsection{Task 6-1 Review}\label{task-6-1-review}}
+
+From \href{https://observablehq.com/@hongtaoh/day-nine-spet-2-2020}{Day 9}
+
+\begin{itemize}
+\item
+  6-1-1:
+
+  \begin{itemize}
+  \item
+    To specify the height of each bar, I should use \texttt{.style()}, rather than \texttt{.attr()}. In \texttt{D3.js}, \texttt{.style()} is to assign CSS styles to a HTML element. In CSS, we won't use \texttt{style} because everything is \texttt{style()}. In HTML, we do use it. For example, \texttt{\textless{}div\ style="height:\ 75px;"\textgreater{}\textless{}/div\textgreater{}"};
+  \item
+    To make the height of each bar correspondes to its data value, I should use\texttt{function(d)\{return\ d\ +\ "px"\}} rather than \texttt{function(d)\{return\ d\ \}};
+  \end{itemize}
+\item
+  6-1-2: To add some space (2px) between bars, I need to use \texttt{margin-right:\ 2px} in the CSS (\texttt{div.bar\{\}}. To learn more about the differences between \texttt{padding}, \texttt{border}, \texttt{margin}, read \href{https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model}{this amazing tutorial};
+\item
+  6-1-3:
+
+  \begin{itemize}
+  \item
+    First, I need to initilize an empty array using \texttt{dataset\ =\ {[}{]}}
+  \item
+    In Javascript, \texttt{Math} is \href{https://www.w3schools.com/js/js_math.asp}{a global object}, whereas \texttt{.push()} is \href{https://www.w3schools.com/js/js_array_methods.asp}{an array method}.
+  \item
+    A \texttt{for} loop: \texttt{for\ (initialization;\ test;\ updata)\{\ \}}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{task-6-2}{%
+\subsection{Task 6-2}\label{task-6-2}}
+
+From \href{https://observablehq.com/@hongtaoh/day-nine-spet-2-2020}{Day 9}
+
+\begin{itemize}
+\item
+  6-2-4
+
+  \begin{itemize}
+  \item
+    When drawing five circles, we used three terms, ``svg'', ``circles'', and ``circle'', which of them should be fixed, and which can be random? ``svg'' and ``circle'' should be fixed, but ``circles'' can be random;
+  \item
+    One thing I still don't understand is that in Task 6-1-1, I have to use \texttt{function(d)\{return\ d\ +\ "px"\}} rather than \texttt{function(d)\{return\ d\ \}}. However, in Task 6-2-4, using \texttt{.attr("r",\ function(d)\{return\ d\ \})} is fine, and in \texttt{.attr("cy",\ h/2)}, I don't need to put \texttt{""} to enclose \texttt{h/2}. I guess it's because of \textbf{the differences between \texttt{.style()} and \texttt{.attr()}}. But \textbf{how different? I don't know.};
+  \item
+    When we need the index of the data values, we should use \texttt{function(d,i)\{\}} even if we don't need the \texttt{d}. However, when we only need the \texttt{d}, we can simply use \texttt{function(d)\{\}}.
+  \end{itemize}
+\item
+  6-2-6: Again, we need to add \texttt{px} in \texttt{style}
+\end{itemize}
+
+\hypertarget{task-6-3}{%
+\subsection{Task 6-3}\label{task-6-3}}
+
+From \href{https://observablehq.com/@hongtaoh/day-nine-spet-2-2020}{Day 9}
+
+To change the color of bars, we need to use \texttt{.attr("fill",\ "teal")}, rather than \texttt{.style()}.
+
+\hypertarget{task-6-1}{%
+\subsection{Task 6-1}\label{task-6-1}}
+
+From \href{https://observablehq.com/@hongtaoh/day-ten-sept-3rd-2020}{Day Ten}
+
+\begin{itemize}
+\item
+  6-1-1. Again, I forgot the difference between \texttt{.attr()} and \texttt{.style()}.
+
+  \begin{itemize}
+  \item
+    \texttt{.style()} assigns \textbf{CSS styles (properties and value)s} to \textbf{a HTML element}, just like the way we assign CSS styles when we are writing HTML. For example, \texttt{\textless{}div\ style="height:\ 75px;"\textgreater{}\textless{}/div\textgreater{}}.
+  \item
+    In comparison, \texttt{.attr()} sets \textbf{an HTML attribute and its values} on a HTML element. Note that an element's class is stored as an HTML atrribute.
+  \end{itemize}
+\item
+  6-1-3. \texttt{A.push(B)} will put B to the end of A. \texttt{.push()} is an array method.
+\end{itemize}
+
+\hypertarget{task-6-2-1}{%
+\subsection{Task 6-2}\label{task-6-2-1}}
+
+From \href{https://observablehq.com/@hongtaoh/day-ten-sept-3rd-2020}{Day Ten}
+
+\begin{itemize}
+\item
+  6-2-2.
+
+  \begin{itemize}
+  \item
+    \texttt{\textless{}svg\textgreater{}} is just like an HTML element. \texttt{width}, \texttt{height} are its attributs. \texttt{rect}, \texttt{circle}, \texttt{text} are all elements. \texttt{x}, \texttt{y}, \texttt{cx}, \texttt{cy} and \texttt{r} are all attributes. Read \href{http://jonathansoma.com/tutorials/d3/using-attr-and-style/}{this amazing tutorial} to really understand what is an element and what are attributs.
+  \item
+    \textbf{I still did not understand it. Why is that I need to use \texttt{style()} to specify the \texttt{height} of \texttt{div} in }Task 6-1-1** but I need to use \texttt{.attr()} to specify the \texttt{height} of a \texttt{svg} here??** I guess it's because that for \texttt{div}, \texttt{height} is a CSS property, but for \texttt{svg}, \texttt{height} is an attribute? Maybe.
+  \end{itemize}
+\item
+  6-2-4. I need to use \texttt{svg.selectAll(\textquotesingle{}circle\textquotesingle{})} rather than \texttt{svg.select(\textquotesingle{}circle\textquotesingle{})}. Think about why for a moment;
+\item
+  6-2-5. As the \href{http://jonathansoma.com/tutorials/d3/using-attr-and-style/}{amazing tutorial} mentioned, here, using either \texttt{.attr()} or \texttt{.style()} is fine. The key difference is that I need to use \texttt{return\ d\ /\ 2\ +\ "px"} for \texttt{stroke-wideth} when using \texttt{.style()}.
+\end{itemize}
+
+\hypertarget{concluding-words-on-.style-and-.attr}{%
+\subsection{Concluding words on .style() and .attr():}\label{concluding-words-on-.style-and-.attr}}
+
+\begin{itemize}
+\item
+  For \texttt{\textless{}div\textgreater{}}, \texttt{height} is a CSS property, so I should use \texttt{style};
+\item
+  For \texttt{\textless{}svg\textgreater{}}, \texttt{height}, \texttt{width}, \texttt{x}, \texttt{y}, \texttt{cx}, \texttt{cy}, \texttt{r} are attributes, so I should use \texttt{attr()};
+\item
+  For \texttt{\textless{}svg\textgreater{}}, \texttt{fill}, \texttt{stroke}, and \texttt{stroke-width} are also attributes. I can use either \texttt{style()} or \texttt{attr()}, but \texttt{style()} is better because it is not about \textbf{position} and \textbf{size}.
+\item
+  Refer to \href{http://jonathansoma.com/tutorials/d3/using-attr-and-style/}{this tutorial} and \href{https://www.carlosrendon.me/unfinished_d3_book/d3_attr.html}{this tutorial}.
+\end{itemize}
+
+\hypertarget{task-6-5}{%
+\subsection{Task 6-5}\label{task-6-5}}
+
+From \href{https://observablehq.com/@hongtaoh/day-eleven-sept-4th-2020}{Day Eleven}
+
+\begin{itemize}
+\item
+  6-5-1. When adding value labels on top of each bar, I should not use \texttt{rect.selectAll("text").data(dataset).enter().append("text")...}. Doing so will add twenty \texttt{text} element within each \texttt{rect} element! This is not I am looking for at all. Rather, I should use \texttt{svg.selectAll("text").data(dataset).enter().append("text")}.
+\item
+  6-5-2. \texttt{.style("font-size",\ "11px")}.
+\end{itemize}
+
+\hypertarget{task-6-6}{%
+\subsection{Task 6-6}\label{task-6-6}}
+
+From \href{https://observablehq.com/@hongtaoh/day-eleven-sept-4th-2020}{Day Eleven}
+
+\begin{itemize}
+\tightlist
+\item
+  6-6-2. Whenever you use \texttt{function()\{\}}, remember to add \texttt{return}.
+\end{itemize}
+
+\hypertarget{task-6-6-1}{%
+\subsection{Task 6-6}\label{task-6-6-1}}
+
+From \href{https://observablehq.com/@hongtaoh/day-eighteen-sept-11-2020}{Day Eighteen}
+
+\hypertarget{task7}{%
+\chapter{Task 7: Scales}\label{task7}}
+
+Basic Knowledge about Scales:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Why using scales?
+  From \href{https://observablehq.com/@hongtaoh/day-eleven-sept-4th-2020}{Day 11}
+\end{enumerate}
+
+Scales are \textbf{functions} that map from an \textbf{input domain} to an \textbf{output range}.
+
+Why do we need scale. Imagine we have this dataset: {[} 1, 2, 4, 10, 100, 1000, 50000, 10000000000000{]}. Now, I ask you to draw a bar chart of this dataset, with the height of each bar corresponding to each data value. The first method we can think of is that the first bar will be 1 pixel tall, the second 2 px tall, the third 4 px tall. But the last data value will be 10000000000000 tall! Can you imagine how big a display we need to accommodate this value?
+
+Instead, we might better set the height of the last bar to be 1000, which is reasonable for most displays people are using today. Then, what will be the height of the third bar that corresponds to the value of 4? That's what \textbf{scales} do!
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Understanding Array
+  From \href{https://observablehq.com/@hongtaoh/day-thirteen-2020-09-06}{Day 13}
+\end{enumerate}
+
+What is an array? According to Scott's book, an array is ``\textbf{a sequence of values}, conveniently stored in a single \textbf{variable}.''
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  How to find the largest number in a dataset
+\end{enumerate}
+
+If the dataset is a one-dimensional array, then it's very simple. Just use the \texttt{d3.max()}function is okay.
+
+For example:
+
+\texttt{var\ dataset\_01\ =\ {[}4,\ 5,\ 9,\ 10,\ 24,\ 56{]}}
+
+\texttt{d3.max(dataset\_01)\ \ //56}
+
+However, things get a little bit more complicated when the dataset is two dimensional: an array of arrays. Simply put the dataset into \texttt{d3.max()} won't give us the largest number.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{var}\NormalTok{ dataset\_02 }\OperatorTok{=}\NormalTok{ [}
+\NormalTok{  [}\DecValTok{0}\OperatorTok{,} \DecValTok{4}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\DecValTok{5}\OperatorTok{,} \DecValTok{9}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\DecValTok{8}\OperatorTok{,} \DecValTok{90}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\DecValTok{47}\OperatorTok{,} \DecValTok{33}\NormalTok{]}\OperatorTok{,}\NormalTok{ [}\DecValTok{55}\OperatorTok{,}\DecValTok{99}\NormalTok{]}
+\NormalTok{  ]}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{d3.max(dataset\_02)\ //{[}8,\ 90{]}}
+
+Okay, what should we do then? If we want to identify the largest number among all the first number in each array within \texttt{dataset\_02}, we can do it this way:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{d3}\OperatorTok{.}\FunctionTok{max}\NormalTok{(dataset\_02}\OperatorTok{,} \KeywordTok{function}\NormalTok{(d)\{}
+  \ControlFlowTok{return}\NormalTok{ d[}\DecValTok{0}\NormalTok{]}\OperatorTok{;}\NormalTok{\})}
+\end{Highlighting}
+\end{Shaded}
+
+Here, \texttt{function(d)\{return\ d{[}0{]}\}} is called an \emph{accessor function}, as it helps us \textbf{access} the first number in each array.
+
+How to understand the above code? I would understand it this way. \texttt{d3.max()} need to first have all the numbers we ask it to evaluate, in the example above, all the first numbers in each array. To get the first numbers, we need to use the accessor function. Then, there is a problem, what does the \texttt{d} mean? \texttt{d3.max()} doesn't know, so we have to specify that. We tell \texttt{d3.max()} that each \texttt{d} comes from \texttt{dataset\_02}, then the stupid \texttt{d3.max()} will know where to find each \texttt{d}.
+
+\hypertarget{task-7-1-to-7-9}{%
+\section{Task 7-1 to 7-9}\label{task-7-1-to-7-9}}
+
+From \href{https://observablehq.com/@hongtaoh/day-thirteen-2020-09-06}{Day 13}
+
+\begin{itemize}
+\tightlist
+\item
+  7-1. Based on Task 6-6. For the X coordinate, set the input domain to be {[}0, the largest number of d{[}0{]}{]}, and the output range to be {[}0, w{]}. For the Y coordinate, set the input domain to be {[}0, the largest number of d{[}1{]}{]}, and the output range to be {[}0, h{]}.
+\end{itemize}
+
+Change the location of each circle and annodated text accordingly. For the text, use ``sans-serif'' in 11px and in red.
+
+\begin{itemize}
+\item
+  7-2. Let the circles with larger y values be at the top of the plot and those with smaller values at the bottom. \emph{Hint}: change the output range of \texttt{yScale}.
+\item
+  7-3. To keep the circle elements 20 pixels away from the boarder of the SVG. \emph{Hint}: create a padding of 20 and then change the output range of both \texttt{xScale} and \texttt{yScale}.
+\item
+  7-4. Texts on the far right are still being cut off, solve this problem. \emph{Hint}: adjust the \texttt{range} of \texttt{xScale}.
+\end{itemize}
+
+Note that to create paddings on each side of our charts, a better way is Mike Bostock's \href{https://observablehq.com/@d3/margin-convention}{\textbf{Margin Convention}}.
+
+\begin{itemize}
+\item
+  7-5. Use the method of \emph{Margin Convention} mentioned above. top: 20, right: 30, bottom: 30, left:40
+\item
+  7-6. (\textbf{Please note that this is not the ideal way to scale cirlces! We'd better scale them by area rather than by radius. This is just for illustration and for the sake of exercise!}) Create a custom scale for radius such that the greater the y value, the bigger the radius. Let the domain be {[}0, the largest number of y value{]}, and the range be {[}2, 5{]}.
+\item
+  7-7. Add an array to the original dataset, {[}600, 150{]}.
+\item
+  7-8. Change the width of the SVG to be 600, and the height 300.
+\item
+  7-9. Tell me what the functions of \texttt{nice()}, \texttt{rangeRound()}, and \texttt{clamp()} do and how to use them.
+\end{itemize}
+
+\hypertarget{task-7-10-7-11}{%
+\section{Task 7-10 \& 7-11}\label{task-7-10-7-11}}
+
+From \href{https://observablehq.com/@hongtaoh/day-eighteen-sept-11-2020}{Day 18}
+
+\begin{itemize}
+\item
+  7-10. Check out the element inspector after Task 7-1-9 is done. You'll find that the numbers for \texttt{cx} and \texttt{cy} are pretty long. Try to round up those numbers using the \texttt{rangeRound()} method;
+\item
+  7-11. Scale those circles by area rather than by radius, such that the bigger the \texttt{y} value, the bigger the area of a circle. Let the area be within {[}0, 10{]}. \emph{hint} : use \texttt{d3.scaleSqrt()}, and remember to replace \texttt{rScale} with \texttt{aScale}.
+
+  \begin{itemize}
+  \item
+    Please note that for \texttt{aScale}, the starting point for both the input domain and the output range \textbf{must} be zero. If you don't understand why, read \href{https://hongtaoh.com/en/2020/09/07/d3-scales/}{my blog post on d3.js scales}.
+  \item
+    Why should we use \texttt{d3.scaleSqrt()} here: If the \texttt{y} value of data point A is four times as big as that of data point B, then we want to make sure that Circle A's area is also four times as large as that of Circle B. To maintain this ratio, we need to make sure that Circle A's radius is \textbf{twice} as large as that of Circle B. \texttt{d3.scaleSqrt} maps from the input domain to the output range using this fomula: \texttt{y\ =\ m*x\^{}(1/2)\ +\ b}, where \texttt{x} represents the input domain (i.e., the y value of data points, or the area of Circel A, B, C\ldots) and \texttt{y} represents the output range (i.e., the radius of Circle A, B, C\ldots). In our case, sine the starting point for both the input domain and the output range is zero, \texttt{b\ =\ 0}. Therefore, \texttt{y\_1\ /\ y\_2\ =\ (x\_1\ /\ x\_2)\^{}(1/2)}.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{task-7-review}{%
+\section{Task 7 Review}\label{task-7-review}}
+
+\hypertarget{from-day-18}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-eighteen-sept-11-2020}{Day 18}}{From Day 18}}\label{from-day-18}}
+
+\begin{itemize}
+\item
+  7-1. You cannot use the function of \texttt{max} by calling itself. You have to call \texttt{d3} first, just like when you are using \texttt{scaleLinear()}. This is because both \texttt{scaleLinear()} and \texttt{max()} are \texttt{d3} functions or methods.
+\item
+  7-5.
+
+  \begin{itemize}
+  \item
+    My original understanding of \textbf{margin convention} is wrong. There isn't magic involved here. What \texttt{var\ margin\ =\ (\{\ \ \})} does here is simply assign numbers to names, so that those numbers can be referred to by calling \texttt{margin.top}, \texttt{margin.left}\ldots.
+  \item
+    If the range of \texttt{yScale} was initially \texttt{{[}h,\ 0{]}}, do pay attention when you use margin convention. If you can do it right, you have clearly understood margin convention. \emph{Hint} : \textbf{It should be \texttt{.range({[}h\ -\ \ margin.bottom,\ margin.top{]})}}.
+  \item
+    Why is that we should use \texttt{.range({[}h\ -\ \ margin.bottom,\ margin.top{]})} here? The domain here is ({[}0, the maximum of d{[}1{]}), and we want circles with smaller d{[}1{]} values appear at bottom, so the range should start from \texttt{h} something. Now, suppose \texttt{margin.top\ =\ 20}, and \texttt{margin.bottom\ =\ 40}. If we use \texttt{.range({[}h\ -\ margin.top,\ margin.bottom{]})}, then \texttt{0} in the input domain will become \texttt{h\ -\ \ margin.top}, and that will be the lowest point in our chart. Is this what we want? Not really. I want the lowest point to be at \texttt{h\ -\ margin.bottom}.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{from-day-19}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-nineteen-spet-12-2020}{Day 19}}{From Day 19}}\label{from-day-19}}
+
+\begin{itemize}
+\tightlist
+\item
+  7-1. The order of codes does matter in D3.js. If I put \texttt{xScale} and \texttt{yScale} before \texttt{var\ dataset\ =\ ...}, then D3 would not be able to generate any results. This because I need to call \texttt{dataset} in \texttt{xScale} and \texttt{yScale}.
+\end{itemize}
+
+\hypertarget{from-day-22}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-two-spet-15th-2020}{Day 22}}{From Day 22}}\label{from-day-22}}
+
+7-1-5. In \texttt{var\ margin\ =\ (\{top:\ 20,\ right:\ 30,\ bottom:\ 30,\ left:\ 40\});}, you \textbf{should not}, and in fact \textbf{cannot}, put \texttt{;} right after \texttt{left:40}.
+
+\hypertarget{task8}{%
+\chapter{Task 8: Axes}\label{task8}}
+
+\hypertarget{task-8-1-to-8-6}{%
+\section{Task 8-1 to 8-6}\label{task-8-1-to-8-6}}
+
+From \href{https://observablehq.com/@hongtaoh/day-nineteen-spet-12-2020}{Day 19}
+
+\begin{itemize}
+\item
+  8-1. Create an axis on top of the chart for \texttt{xScale}. Assign a class named ``axis'' to the group element you just created at the end of the \texttt{svg} element. \emph{hint} : think about whether you need to use \texttt{d3.axisTop()} or \texttt{d3.axisBottom()}.
+\item
+  8-2. Push the axis to the base of the chart using SVG \emph{transformations}.
+\item
+  8-3. Style \texttt{path} and \texttt{line} in \texttt{.axis} such that they are in teal (\emph{Hint}: using \texttt{stroke:\ teal;}). Style \texttt{text} such that it is Optima, sans-serif, bold, 14px, and in teal.
+\item
+  8-4. Set the rough number of ticks to be 5. // D3 might override it, though.
+\item
+  8-5. Only label 0, 100, 250, and 600, using \texttt{tickValues({[}{]})}.
+\item
+  8-6. Generate a Y-axis on the left. Set the rough number of ticks to be 5. Push this axis to the right by \texttt{margin.left} px. Also assign the class of ``axis'' to it.
+\end{itemize}
+
+\hypertarget{some-key-points-about-math}{%
+\section{\texorpdfstring{Some key points about \texttt{Math}}{Some key points about Math}}\label{some-key-points-about-math}}
+
+From \href{https://observablehq.com/@hongtaoh/day-twenty-task-8-continued-2020-09-13}{Day 20}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{Math.random()} will generate random numbers less than 1.0.
+\item
+  If \texttt{random\ =\ 8.9999}, then \texttt{Math.round(random)\ =\ 9} but \texttt{Math.floor(random)\ =\ 8}.
+\item
+  \texttt{Math} is \textbf{parallel} with \texttt{d3}, so \texttt{d3.Math....} is unnecessary and wrong.
+\end{itemize}
+
+\hypertarget{task-8-7-to-8-9}{%
+\section{Task 8-7 to 8-9}\label{task-8-7-to-8-9}}
+
+From \href{https://observablehq.com/@hongtaoh/day-twenty-task-8-continued-2020-09-13}{Day 20}
+
+\begin{itemize}
+\item
+  8-7. Let the dataset be made up of 50 pairs of random numbers between 0 and 100 that are integers.
+\item
+  8-8. Remove labels.
+\item
+  8-9. Treat values on x-axis as percentages with one decimal point precision. \emph{Hint} : using \texttt{d3.format("")}, and \texttt{.tickFormat()}.
+\end{itemize}
+
+\hypertarget{task-8-review}{%
+\section{Task 8 Review}\label{task-8-review}}
+
+From \href{https://observablehq.com/@hongtaoh/day-twenty-two-spet-15th-2020}{Day 22}
+
+\begin{itemize}
+\item
+  8-1. \texttt{g} element is a \texttt{group} element. It is an SVG element, just like \texttt{line}, \texttt{circle}, and \texttt{rect}. One thing different is that \texttt{g} element is invisible. It serves two functions:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    Helps us group other elements;
+  \item
+    Accepts transformations onto it, which is very handy.
+  \end{enumerate}
+\item
+  8-7. \texttt{for\ (var\ i\ =\ 0;\ i\ \textless{}\ 50;\ i++)\{\}}. Two points to remember:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    It should be \texttt{var\ i\ =\ 0}, rather than simply \texttt{i\ =\ 0};
+  \item
+    Seperate the codes inside the bracket by \texttt{;}, not \texttt{,}.
+  \end{enumerate}
+\end{itemize}
+
+\hypertarget{task9}{%
+\chapter{Task 9: Updates \& Transiations}\label{task9}}
+
+\hypertarget{task-9-1}{%
+\section{Task 9-1}\label{task-9-1}}
+
+\hypertarget{from-day-20}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-task-8-continued-2020-09-13}{Day 20}}{From Day 20}}\label{from-day-20}}
+
+\begin{itemize}
+\tightlist
+\item
+  9-1-1. Make a normal-looking bar chart for this dataset: \texttt{{[}\ 5,\ 10,\ 13,\ 19,\ 21,\ 25,\ 22,\ 18,\ 15,\ 13,\ 11,\ 12,\ 15,\ 20,\ 18,\ 17,\ 16,\ 18,\ 23,\ 25\ {]}}. Width and height of the SVG: 600, 250.
+\end{itemize}
+
+\hypertarget{from-day-21}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-one-task-9-continued-2020-09-14}{Day 21}}{From Day 21}}\label{from-day-21}}
+
+\begin{itemize}
+\item
+  9-1-2. Create an \texttt{xScale} using \texttt{d3.scaleBand()}. Let the output range be \texttt{{[}0,\ w{]}}, and assign 5 percent of the bandwidth to spacing in between bands. Use this \texttt{xScale} when setting \texttt{x}, and \texttt{width} of each \texttt{rect} accordingly. \emph{Hint} :
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    For \texttt{.domain()}, use \href{https://github.com/d3/d3-array\#range}{\texttt{d3.range()}}. For example, \texttt{range(10)} will produce \texttt{{[}0,\ 1,\ 2,\ 3,\ 4,\ 5,\ 6,\ 7,\ 8,\ 9{]}}. \textbf{Note} that stop is exclusive.
+  \item
+    \texttt{bandwidth()}.
+  \end{enumerate}
+\item
+  9-1-3. Put the text of corresponding data values right in the middle of the top of each bar. Think hard about how to set the \texttt{x} (\emph{Hint} : You'll need to use \texttt{xScale(i)}, and \texttt{xScale.bandwidht()}.
+\item
+  9-1-4. Let the text ``Click here'' appear above the bar chart. When visitors click ``Click here'', the text ``Hey, don't click that'' will pop up.
+
+  \begin{itemize}
+  \item
+    \emph{Hint} : Add a paragraph element before our javascript. Down at the end of our d3 code, select this new p, and add an \emph{event listener} to the element. You'll use the \texttt{alert()} function within a \texttt{on} function.
+  \item
+    What is an \emph{event listener}: an anonymous function that listens for an event on an element or elements.
+  \item
+    The \texttt{.on} method takes on two arguments: the event type, and the listener itself which is an anonymous function.
+  \end{itemize}
+\item
+  9-1-5. Rather than generating the annoying pop-up text, updating the dataset. That is to say, after people click on the text, the bar chart will represent this updated dataset: \texttt{{[}11,\ 12,\ 15,\ 20,\ 18,\ 17,\ 16,\ 18,\ 23,\ 25,\ 5,10,13,19,21,25,22,18,15,13{]}};
+\item
+  9-1-6. Add transition to the bars heights.
+\item
+  9-1-7. Let the transition last for 1 second. Now, we can see that labels did not have smooth transitions along with the bar heights. Add transition and duration to labels as well.
+\item
+  9-1-8. Make the rate of motion be linear using the \texttt{ease()} function. \emph{Hint} : \texttt{easeLinear}.
+\item
+  9-1-9. Create a one second delay before each transition.
+\item
+  9-1-10. Make the delay dynamic (so called ``staggered delays'') such that each element is delayed 100 ms more than the preceding one.
+\end{itemize}
+
+\hypertarget{from-day-22-1}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-two-spet-15th-2020}{Day 22}}{From Day 22}}\label{from-day-22-1}}
+
+\begin{itemize}
+\item
+  9-1-11. Continue with 9-1-10. To scale the dynamic delay to the length of the dataset such that visitors need to wait for at most 1 second to see the last rect element move.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Why? If we only have 25 data values, 9-1-10 might be okay. However, if we have 1000 data points, then visitors have to wait for a very long time to see the transition finish. Scaling the delay to the length of the data makes more sense.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{task-9-2}{%
+\section{Task 9-2}\label{task-9-2}}
+
+Continue with Task 9-1-11.
+
+\hypertarget{from-day-23}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-three-2020-09-16}{Day 23}}{From Day 23}}\label{from-day-23}}
+
+\begin{itemize}
+\item
+  9-2-1. Make changes so that every time you click, new data will show up with transitions. The new data will be an array of random \textbf{integers} with values between 0 and 24. Let the new array have the same length as the original one (the one before any updates). \emph{Hint} :
+
+  \begin{itemize}
+  \item
+    Use a \texttt{for} loop;
+  \item
+    \texttt{Math.random()} generates random numbers from \(0\) up to, but not including \(1\).
+  \end{itemize}
+\item
+  9-2-2. Add extra logical to set the vertical placement and style of labels. ``When the data value is less than or equal to 1, place the label up above the bar and set its fill to black. Otherwise, place and style the label normally'' (p.~167). \emph{Hint} :
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ () \{\}}
+  \ControlFlowTok{else}\NormalTok{ \{\} }
+\CommentTok{// Since we use function (d) \{ \}, we need to add "return" in our if statement.}
+\CommentTok{// Also note that we still need to fill out the else \{\} part. We cannot leave it as blank. }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  9-2-3. We earlier used \texttt{Math.random()\ *\ 25}. Replace \texttt{25} with a variable \texttt{maxValue}. Set the \texttt{maxValue} to be \texttt{100}.
+\end{itemize}
+
+\textbf{Note}: We'll stop editing bar charts temporarily starting from 9-2-4.
+
+\begin{itemize}
+\item
+  9-2-4. Based on the results we got from Task 8, do the following: 1. Delete the CSS for .axis path, line, and text; 2. Let the radius of each circle be a constant: 2 px. Then, do the following:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    Rename the class of xAxis as \texttt{x\ axis} and that of yAxis as \texttt{y\ axis}.
+  \item
+    When people click on the text ``Click here for new data'', a new pair of 50 integers between 0 and 100 will show up. Make transitions to these changes and set the duration to be 1 second. Make sure that scales, and both axes are also updated. \emph{Hint} : to update the axes, first select the axis, and make a transition, set the transition's duration, and call the axis generator.
+  \end{enumerate}
+\item
+  9-2-5. Make changes to the code so that when you click the trigger, the fill of all the circles changes to magenta, and the radius becomes 3 px. When the transition is over, the fill changes to black and the radii become 2px.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Hint} : Within circle-updating code, use two \texttt{.on()} statements, whithin which you need to first specify whether it's \texttt{start} or \texttt{end}, and then use an anonymous function to first select the current element and set the attributions.
+  \end{itemize}
+\item
+  9-2-6. Add a transition (which lasts for 1 second) to the start of the transition and see what will happen.
+\end{itemize}
+
+\hypertarget{from-day-25}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-five-2020-09-18}{Day 25}}{From Day 25}}\label{from-day-25}}
+
+\begin{itemize}
+\item
+  9-2-7. Modify the code so that when you click the trigger, each circle will turn pink and its radius immediately increases from 2 to 7. Then circles move (1 second) to their new positions. In the end, circles \textbf{transition} (1 second) to original color and size.
+\item
+  9-2-8. ``Instead of reelecting elements and calling a new transition on each one with \texttt{.on("end",\ ...)}, just tack a second transition onto the end of the chain.'' (p.~174). This chaining approach is recommended when ``sequencing multiple transitions''.
+\end{itemize}
+
+\hypertarget{from-day-28}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-eight-task-9-2-continued-2020-09-21}{Day 28}}{From Day 28}}\label{from-day-28}}
+
+\begin{itemize}
+\tightlist
+\item
+  9-2-9. \textbf{Go back to our bar charts.} Based on codes from Task 9-2-3. Make changes so that every time you click the trigger, a new integer between 0 and 24 will be added. Update both the bars and the text labels. The newly generated bars and labels will move from the right border of the SVG to its proper place. Make the transition last for half a second. \emph{Hint} : Use \texttt{.merge()}.
+\end{itemize}
+
+\hypertarget{from-day-31}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-31-2020-09-24}{Day 31}}{From Day 31}}\label{from-day-31}}
+
+\begin{itemize}
+\tightlist
+\item
+  9-2-10. Create a \texttt{p} element with the text ``Click here to remove data''. Every time you click it, the first bar and its associated label will be removed. Add a transition (half a second) to the removal so that the \textbf{exiting} bar will move to the bottom-right corner of the SVG and then disappear. Make sure to update the bars and labels.
+\end{itemize}
+
+\emph{Hint} :
+- To remove the first data value from dataset, use \texttt{.shift()};
+
+\begin{itemize}
+\item
+  To remove svg elements (rect and text), use \texttt{.exit().remove()}. The \texttt{.exit()} function returns a reference to the exiting element; Transition syntaxes should be added between \texttt{.exit()} and \texttt{.remove()};
+\item
+  To make sure that the exiting bar moves to the bottom-right corner before disappearing, set its position after the transition and before the removal;
+\item
+  After the removal, we need to update the bars and labels. That's fairly easy. For \texttt{rect}, just use \texttt{svg.selectAll("rect")}, and then set its position, width, height and color using \texttt{attr("x",\ ...)...}. For \texttt{text}, first use \texttt{svg.selectAll("text").text(d\ =\textgreater{}\ d)}, and then set texts' positions.
+\end{itemize}
+
+\hypertarget{unsolved-puzzles-in-task-9}{%
+\section{Unsolved puzzles in Task 9}\label{unsolved-puzzles-in-task-9}}
+
+\hypertarget{puzzle-one-from-day-26}{%
+\subsection{\texorpdfstring{Puzzle one from \href{https://observablehq.com/@hongtaoh/day-twenty-six-2020-09-19}{Day 26}}{Puzzle one from Day 26}}\label{puzzle-one-from-day-26}}
+
+Maybe the answer: See \href{https://observablehq.com/@hongtaoh/day-thirty-2020-09-22}{Day 30}.
+
+\hypertarget{puzzle-two}{%
+\subsection{Puzzle two}\label{puzzle-two}}
+
+Something I don't understand but don't have time to figure out:
+
+\begin{itemize}
+\item
+  I want to let the exiting label to turn red and move to the upper-right corner before disappearing, so I specified \texttt{.attr("x",\ w).attr("y",\ 0).} after the transition syntaxes and before \texttt{.remove()}. However, I noticed that it just cannot move horizontally. It keeps within its original horizontal position.
+\item
+  I just don't know why and how \href{https://github.com/scotthmurray/d3-book/blob/master/chapter_09/26_removing_values.html}{Scott Murray's codes} worked. Why should we use \texttt{bars.enter()...} here?
+\item
+  How to get the transition in \href{https://github.com/scotthmurray/d3-book/blob/master/chapter_09/26_removing_values.html}{Scott Murray's codes} when updating the bars?
+\item
+  I used \texttt{dataset.pop()}, which is supposed to delete the last data value. Yes, when I used
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svg}\OperatorTok{.}\FunctionTok{selectAll}\NormalTok{(}\StringTok{"rect"}\NormalTok{)}
+                \OperatorTok{.}\FunctionTok{data}\NormalTok{(dataset)}
+                \OperatorTok{.}\FunctionTok{exit}\NormalTok{()}
+                \OperatorTok{.}\FunctionTok{transition}\NormalTok{()}
+                \OperatorTok{.}\FunctionTok{attr}\NormalTok{(}\StringTok{"x"}\OperatorTok{,}\NormalTok{ w)}
+                \OperatorTok{.}\FunctionTok{attr}\NormalTok{(}\StringTok{"y"}\OperatorTok{,}\NormalTok{ h)}
+                \OperatorTok{.}\FunctionTok{remove}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+The exiting bar traveled from the left! Why???
+
+\hypertarget{puzzle-three-from-day-40}{%
+\subsection{\texorpdfstring{Puzzle three from \href{https://observablehq.com/@hongtaoh/day-40-2020-10-03}{Day 40}}{Puzzle three from Day 40}}\label{puzzle-three-from-day-40}}
+
+I was redoing \href{https://d3.hongtaoh.com/task-9-2.html}{Task 9-2-1}. The answer is \href{https://github.com/scotthmurray/d3-book/blob/master/chapter_09/17_randomized_data.html}{Chapter 09/17\_randomized\_data.html}.
+
+The only difference is that I have already updated the \texttt{xScale} and \texttt{yScale} within the bar and text updating codes. Also, I made a ``small'' mistake: I put \texttt{dataset\ =\ {[}{]}} \textbf{inside} the \texttt{for} loop.
+
+To make the changes more noticeable, change the color of the bar to red within within the bar and text updating codes. Here are the things I didn't understand:
+
+\begin{itemize}
+\item
+  Why isn't the red obscuring the colors of previous rects?
+\item
+  Why is there a larger gap between the start of the first bar?
+\end{itemize}
+
+See more information about d3 band scales \href{https://github.com/d3/d3-scale\#band-scales}{here}.
+
+\hypertarget{puzzle-four-and-five-from-day-45}{%
+\subsection{\texorpdfstring{Puzzle four and five from \href{https://observablehq.com/@hongtaoh/day-45-2020-10-07}{Day 45}}{Puzzle four and five from Day 45}}\label{puzzle-four-and-five-from-day-45}}
+
+\hypertarget{translating-from-d3-to-observable}{%
+\section{Translating from D3 to Observable}\label{translating-from-d3-to-observable}}
+
+See \href{https://observablehq.com/@hongtaoh/day-twenty-seven-2020-09-20}{Day 27}
+
+Some points worth mentioning:
+
+\begin{itemize}
+\item
+  You can write codes involving multiple variables by including them in curly brackets. If you don't use curly brackets, you have to dedicate one cell to each variable. See \href{https://observablehq.com/@hongtaoh/bar-chart-cell-by-cell}{this example} if you don't know what ``dedicating one cell to each variable'' means.
+\item
+  In the book, you normally write \texttt{var\ w\ =\ 600}. However, now \texttt{let} and \texttt{const} are preferred. Read \href{https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/}{here} and \href{https://hackernoon.com/js-var-let-or-const-67e51dbb716f}{here} for explanations.
+\item
+  To show the results, you need to use \texttt{return\ svg.node()}. Again, don't ask me why.
+\item
+  By the way, \texttt{d\ =\textgreater{}\ yScale(d)} is simply short for \texttt{function(d)\ \{\ return\ yScale(d)\ \}}. Similarly, \texttt{(d,\ i)\ =\textgreater{}\ xScale(i)} means \texttt{function(d,\ i)\ \{\ return\ xScale(i)\}}
+\end{itemize}
+
+\hypertarget{understanding-the-selectall.data.enter.append-pattern}{%
+\section{\texorpdfstring{Understanding the \texttt{selectAll().data().enter().append()} pattern}{Understanding the selectAll().data().enter().append() pattern}}\label{understanding-the-selectall.data.enter.append-pattern}}
+
+\hypertarget{from-day-29}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-nine-2020-09-22}{Day 29}}{From Day 29}}\label{from-day-29}}
+
+\begin{itemize}
+\item
+  \texttt{svg.selectAll("placeholder-for-rects")} // This will select all placeholder elements and hand them off to the next step
+\item
+  \texttt{.data(dataset)} // This will bind data to the selected placeholder elements, and then return references to all elements to which data was just bound. References to these elements are called ``update selection''.
+\item
+  \texttt{.enter()} // Select elements that do not yet exist and hand them off to the next step.
+\item
+  \texttt{.append("rect")} // Create a rect element within each element returned by \texttt{enter()}, and then return reference to this newly created element.
+\end{itemize}
+
+\hypertarget{task-9-1-review}{%
+\section{Task 9-1 Review}\label{task-9-1-review}}
+
+\hypertarget{from-day-21-1}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-one-task-9-continued-2020-09-14}{Day 21}}{From Day 21}}\label{from-day-21-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  9-1-1. In \texttt{yScale}, if \texttt{.range(0,\ h)}, then the \texttt{y} axis should be \texttt{h\ -\ yScale(d)}. If \texttt{.range(h,0)}, then the \texttt{height} of bars should be \texttt{h\ -\ yScale(d)}.
+\end{itemize}
+
+\hypertarget{from-day-22-2}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-two-spet-15th-2020}{Day 22}}{From Day 22}}\label{from-day-22-2}}
+
+\begin{itemize}
+\item
+  9-1-2.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    It should be \texttt{paddingInner()}, rather than \texttt{PaddingInner()}.
+  \item
+    \texttt{\{return\ "rgb(\ )"\}}
+  \end{itemize}
+\item
+  9-1-3. \texttt{.attr("text-anchor",\ "middle")}
+\item
+  9-1-4. I should use \texttt{d3.select("p")}, rather than \texttt{svg.select("p")}. Why? Because the new \texttt{p} element is parallel with the \texttt{svg} element, I cannot select the \texttt{p} within \texttt{svg}.
+\item
+  9-1-6. The \texttt{.transition()} should be added within the anonymous function. It should be put after you have updated the data and before any changes.
+\item
+  9-1-8. It is \texttt{ease(d3.easeLinear()}, not \texttt{ease(d3.scaleLinear())}.
+\item
+  9-1-9. Scott Murray was wrong. The position of \texttt{.delay()} is not flexible at all. It mush be put AFTER \texttt{.transition()}.
+\item
+  9-1-10. Please keep in mind that if you have \texttt{.delay()} after the \texttt{.transition()}, then \texttt{duration()} is applied to each individual transition, rather than all transitions in aggregate.
+\end{itemize}
+
+\hypertarget{recap-functions-you-absolutely-have-to-call-d3-first}{%
+\subsection{\texorpdfstring{Recap: functions you absolutely HAVE TO call \texttt{d3} first:}{Recap: functions you absolutely HAVE TO call d3 first:}}\label{recap-functions-you-absolutely-have-to-call-d3-first}}
+
+\begin{itemize}
+\item
+  d3.scaleLinear() \ldots{}
+\item
+  d3.max()
+\item
+  d3.range()
+\item
+  d3.easeLinear
+\end{itemize}
+
+\hypertarget{from-day-23-1}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-three-2020-09-16}{Day 23}}{From Day 23}}\label{from-day-23-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  9-1. \texttt{return\ "rgb(0,\ 0,\ "\ +\ Math.round(d*10)\ +\ ")"}. You are not allowed to have space between \texttt{rgb} and \texttt{(}.
+\end{itemize}
+
+\hypertarget{from-day-24}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/untitled}{Day 24}}{From Day 24}}\label{from-day-24}}
+
+\begin{itemize}
+\item
+  \texttt{xScale.bandwidth()}.
+\item
+  \texttt{d3.range()}, rather than \texttt{range()}.
+\item
+  Within the anonymous function of \texttt{.on()}, there is no need to write \texttt{return\ ...}
+\end{itemize}
+
+\hypertarget{from-day-29-1}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-nine-2020-09-22}{Day 29}}{From Day 29}}\label{from-day-29-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  9-1-4.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{\textless{}p\textgreater{}Click\ Here\textless{}/p\textgreater{}}. No need to use ""
+  \item
+    \texttt{alert("phrase\ here")}
+  \end{itemize}
+\item
+  9-1-5. Even if you used \texttt{svg.selectAll("placeholder-for-rects")} to create and select placeholder elements to be used later, you still need to use \texttt{svg.selectAll("rect")} in \texttt{.on()} when you updating the data.
+\end{itemize}
+
+\hypertarget{task-9-2-review}{%
+\section{Task 9-2 Review}\label{task-9-2-review}}
+
+\hypertarget{from-day-24-1}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/untitled}{Day 24}}{From Day 24}}\label{from-day-24-1}}
+
+\begin{itemize}
+\item
+  9-2-2. \texttt{if()\{return\ \}\ else\{\ return\ \}}
+\item
+  9-2-4.
+
+  \begin{itemize}
+  \item
+    \texttt{d3.select("p)} rather than \texttt{d3.select(p)}
+  \item
+    \texttt{.on("click",\ ...)} rather than \texttt{.on("Click",\ ...)}
+  \item
+    \texttt{xScale.domain({[}0,\ d3.max(dataset,\ function(d)\{\ return\ ...\}{]})}. Be sure to add \texttt{dataset}.
+  \end{itemize}
+\item
+  9-2-5.
+
+  \begin{itemize}
+  \item
+    It should be \texttt{d3.select(this)}, rather than \texttt{svg.select(this)}.
+  \item
+    ``start'' can be placed either before or after \texttt{duration()} and ``end'' should be placed at the end of the circle-updating code.
+  \end{itemize}
+\item
+  9-2-6. Only one transition can be active for a given element at any given time.
+\end{itemize}
+
+\hypertarget{from-day-29-2}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-twenty-nine-2020-09-22}{Day 29}}{From Day 29}}\label{from-day-29-2}}
+
+\begin{itemize}
+\item
+  9-2-5. Within \texttt{.on("start",\ ...)}, you need to use \texttt{d3.select(this)}, rather than \texttt{svg.select(this)}.
+\item
+  9-2-7. You can add many transitions you want. However, you cannot add a transition within in \texttt{.on("start",\ ...)}, which is designed for immediate transformations, not interpolated ones.
+\end{itemize}
+
+For example, the following is okay:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svg}\OperatorTok{.}\FunctionTok{selectAll}\NormalTok{(}\StringTok{"circle"}\NormalTok{)}
+     \OperatorTok{.}\FunctionTok{data}\NormalTok{(dataset)}
+     \OperatorTok{.}\FunctionTok{transtion}\NormalTok{()}
+     \OperatorTok{.}\FunctionTok{duration}\NormalTok{(}\DecValTok{1000}\NormalTok{)}
+     \OperatorTok{.}\FunctionTok{transition}\NormalTok{()}
+     \OperatorTok{.}\FunctionTok{duration}\NormalTok{(}\DecValTok{1000}\NormalTok{)}
+     \OperatorTok{.}
+     \OperatorTok{.}
+     \OperatorTok{.}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  9-2-9.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{bars.enter().append("rect")...} will return references to newly created element. Therefore, all the codes that follow will be used for this newly created bar, until you use \texttt{merge()}.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{task10}{%
+\chapter{Task 10: Interactivity}\label{task10}}
+
+Background knowledge:
+
+\texttt{d3.select("p).on("click",\ function()\ \{\}\ );} binds an \emph{event listener} to the p element.
+
+\hypertarget{task-10}{%
+\section{Task 10}\label{task-10}}
+
+\hypertarget{from-day-32}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-32-2020-09-25}{Day 32}}{From Day 32}}\label{from-day-32}}
+
+\begin{itemize}
+\item
+  10-1. Make a bar chart for this dataset: \texttt{{[}\ 5,\ 10,\ 13,\ 19,\ 21,\ 25,\ 22,\ 18,\ 15,\ 13,\ 11,\ 12,\ 15,\ 20,\ 18,\ 17,\ 16,\ 18,\ 23,\ 25\ {]}}. Set width of the SVG to be 600 and the height 250. Set the inner padding to be 5\% of the bandwidth.
+\item
+  10-2. Tack on an \texttt{.on()} function when you create \texttt{rect} so that when you click each bar, that bar's data value will be shown in the console.
+\item
+  10-3. Add \texttt{CSS} so that when the mouse is hovering the element, the bar turn orange.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    To enable this highlighting effect, make sure that you are using \texttt{.attr("fill",\ ...)}, rater than \texttt{.style("fill",\ ...)}.
+  \end{itemize}
+\item
+  10-4. Use \texttt{.on("mouseover",\ ...)} to achieve the same effect.
+\item
+  10-5. You will see that when the mouse leaves the bar, the color does not restore. Use \texttt{mouseout} to solve this problem. In addition, add a transition (1/4 second) to color restoration.
+
+  \begin{itemize}
+  \item
+    \textbf{Note} : In Scott Murray's book, \href{https://github.com/scotthmurray/d3-book/blob/master/chapter_10/05_mouseout.html}{05\_mouseout\_html} and \href{https://github.com/scotthmurray/d3-book/blob/master/chapter_10/06_smoother.html}{06\_smoother.html} of Chapter 10 did not work the way he mentioned in the book. When the mouse left a bar, it turns black, not its original color.
+  \item
+    To solve this problem, reference nothing when defining the anonymous function right after \texttt{mouseout}. Then, use an anonymous function referencing \texttt{d} within \texttt{.attr("fill",\ ...)}.
+  \end{itemize}
+\item
+  10-6. Continue with 10-5. Mouse over a bar and then move the pointer right above the label of this bar. See what happens. Modify your codes so that when the pointer is on the label, the bar does not change its color. This can be done with either CSS or D3. Try both.
+\item
+  10-7. How to achieve the result of 10-6 by grouping SVG elements (p.~202, page number in the book, not that on pdf).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If you find it too difficult to implement, see \href{https://observablehq.com/@hongtaoh/day-33-2020-09-26}{Day 33} for an answer.
+  \end{itemize}
+\item
+  10-8. Continue with \texttt{10-6}. Add an event listener for a click event. Whichever bar you click, the bars will be sorted based on their associated data values. Add a transition (one second) to this process.
+
+  \begin{itemize}
+  \item
+    \emph{Hint} : Add a click event right at the end of rects-creating codes. Name the event listener as \texttt{sortBars} or anything else you prefer. Later define this \texttt{sortBars}. Select all the \texttt{rects}, then use a \texttt{sort()} method whitin which we need to use a \texttt{comparator} function, to sort the data
+  \item
+    d3.ascending()
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{from-day-33}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-33-2020-09-26}{Day 33}}{From Day 33}}\label{from-day-33}}
+
+\begin{itemize}
+\item
+  10-9. Continue with 10-8. During the transition of sorting, if you mouse over some bars, they won't fall into place. Solve this problem by assigning names to transitions.
+\item
+  10-10. So far, you can only click once because a second click won't trigger any changes. Modify the codes so that a second click will trigger a re-sort, ``placing the bars in descending order'' (p.~206). Then a third click again will place the bars in ascending order, and a fourth click will\ldots{}
+\item
+  10-11. Add a staggered delay to the transition so that each bar will move 50ms after the preceding bar moves.
+\item
+  10-12. First remove all the labels. Then, add browser default tooltips. When mousing over a bar, a tooltip of ``this value is\ldots{}'' will show up. \emph{Hint} : \texttt{.append("title").text(...)}
+\end{itemize}
+
+\hypertarget{task-10-review}{%
+\section{Task 10 Review}\label{task-10-review}}
+
+\hypertarget{from-day-34}{%
+\subsection{\texorpdfstring{From \href{https://observablehq.com/@hongtaoh/day-34-2020-09-27}{Day 34}}{From Day 34}}\label{from-day-34}}
+
+\begin{itemize}
+\item
+  10-2. How to interpret the results of 10-2 in console? I didn't know.
+\item
+  10-3. There shouldn't be any space between \texttt{rect:} and \texttt{hover}.
+\item
+  10-7.
+
+  \begin{itemize}
+  \item
+    \texttt{.attr("transform",\ (d,\ i)\ =\textgreater{}\ "translate(...)")}
+  \item
+    Why didn't the following work? Why did I have to use \texttt{transform}? \textbf{I didn't understand}.
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{svg}\OperatorTok{.}\FunctionTok{selectAll}\NormalTok{(}\StringTok{"g"}\NormalTok{)}
+   \OperatorTok{.}\FunctionTok{data}\NormalTok{(dataset)}
+   \OperatorTok{.}\FunctionTok{enter}\NormalTok{()}
+   \OperatorTok{.}\FunctionTok{append}\NormalTok{(}\StringTok{"g"}\NormalTok{)}
+   \OperatorTok{.}\FunctionTok{attr}\NormalTok{(}\StringTok{"x"}\OperatorTok{,}\NormalTok{ (d}\OperatorTok{,}\NormalTok{ i) }\KeywordTok{=\textgreater{}} \FunctionTok{xScale}\NormalTok{(i))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  I tried the Scott Murray's \href{https://github.com/scotthmurray/d3-book/blob/master/chapter_10/13_svg_tooltip.html}{codes} implementing SVG element tooltips, but they didn't work. \href{https://github.com/scotthmurray/d3-book/issues/47}{Here} is the solution to this problem.
+\end{itemize}
+
+\hypertarget{unsolved-puzzles-in-task-10}{%
+\section{Unsolved Puzzles in Task 10}\label{unsolved-puzzles-in-task-10}}
+
+\hypertarget{puzzle-one-from-day-33}{%
+\subsection{\texorpdfstring{Puzzle one from \href{https://observablehq.com/@hongtaoh/day-33-2020-09-26}{Day 33}}{Puzzle one from Day 33}}\label{puzzle-one-from-day-33}}
+
+\end{document}

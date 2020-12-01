@@ -1,3 +1,5 @@
+\mainmatter
+
 # Chapter 3 & 4{#chapter3_and_4}
 
 Some Key Points from Chapter 3 & 4
