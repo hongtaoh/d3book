@@ -14,7 +14,7 @@ bookdown::gitbook:
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
-    in_header: preamble.tex
+    in_header: tex/template_yihui_demo.tex
   latex_engine: xelatex
   citation_package: natbib
   keep_tex: yes

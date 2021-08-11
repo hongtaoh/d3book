@@ -24,7 +24,7 @@
 <meta name="author" content="Hongtao Hao" />
 
 
-<meta name="date" content="2020-12-01" />
+<meta name="date" content="2021-01-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -268,11 +268,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Why didn’t the following work? Why did I have to use <code>transform</code>? <strong>I didn’t understand</strong>.</p></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="task-10-review.html#cb6-1" aria-hidden="true" tabindex="-1"></a>svg<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;g&quot;</span>)</span>
-<span id="cb6-2"><a href="task-10-review.html#cb6-2" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">data</span>(dataset)</span>
-<span id="cb6-3"><a href="task-10-review.html#cb6-3" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">enter</span>()</span>
-<span id="cb6-4"><a href="task-10-review.html#cb6-4" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;g&quot;</span>)</span>
-<span id="cb6-5"><a href="task-10-review.html#cb6-5" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> (d<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="fu">xScale</span>(i))</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a href="task-10-review.html#cb7-1" aria-hidden="true" tabindex="-1"></a>svg<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;g&quot;</span>)</span>
+<span id="cb7-2"><a href="task-10-review.html#cb7-2" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">data</span>(dataset)</span>
+<span id="cb7-3"><a href="task-10-review.html#cb7-3" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">enter</span>()</span>
+<span id="cb7-4"><a href="task-10-review.html#cb7-4" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;g&quot;</span>)</span>
+<span id="cb7-5"><a href="task-10-review.html#cb7-5" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> (d<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="fu">xScale</span>(i))</span></code></pre></div>
 <script type="text/javascript">
 svg.selectAll("g")
    .data(dataset)
@@ -281,7 +281,7 @@ svg.selectAll("g")
    .attr("x", (d, i) => xScale(i))
 </script>
 <ul>
-<li>I tried the Scott Murray’s <a href="https://github.com/scotthmurray/d3-book/blob/master/chapter_10/13_svg_tooltip.html">codes</a> implementing SVG element tooltips, but they didn’t work. <a href="https://github.com/scotthmurray/d3-book/issues/47">Here</a> is the solution to this problem.</li>
+<li>I tried Scott Murray’s <a href="https://github.com/scotthmurray/d3-book/blob/master/chapter_10/13_svg_tooltip.html">codes</a> implementing SVG element tooltips, but they didn’t work. <a href="https://github.com/scotthmurray/d3-book/issues/47">Here</a> is the solution to this problem.</li>
 </ul>
 </div>
 </div>

@@ -24,7 +24,7 @@
 <meta name="author" content="Hongtao Hao" />
 
 
-<meta name="date" content="2020-12-01" />
+<meta name="date" content="2021-01-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -270,13 +270,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>How to get the transition in <a href="https://github.com/scotthmurray/d3-book/blob/master/chapter_09/26_removing_values.html">Scott Murray’s codes</a> when updating the bars?</p></li>
 <li><p>I used <code>dataset.pop()</code>, which is supposed to delete the last data value. Yes, when I used</p></li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="unsolved-puzzles-in-task-9.html#cb4-1" aria-hidden="true" tabindex="-1"></a>svg<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;rect&quot;</span>)</span>
-<span id="cb4-2"><a href="unsolved-puzzles-in-task-9.html#cb4-2" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">data</span>(dataset)</span>
-<span id="cb4-3"><a href="unsolved-puzzles-in-task-9.html#cb4-3" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">exit</span>()</span>
-<span id="cb4-4"><a href="unsolved-puzzles-in-task-9.html#cb4-4" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">transition</span>()</span>
-<span id="cb4-5"><a href="unsolved-puzzles-in-task-9.html#cb4-5" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> w)</span>
-<span id="cb4-6"><a href="unsolved-puzzles-in-task-9.html#cb4-6" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> h)</span>
-<span id="cb4-7"><a href="unsolved-puzzles-in-task-9.html#cb4-7" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">remove</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="unsolved-puzzles-in-task-9.html#cb5-1" aria-hidden="true" tabindex="-1"></a>svg<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;rect&quot;</span>)</span>
+<span id="cb5-2"><a href="unsolved-puzzles-in-task-9.html#cb5-2" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">data</span>(dataset)</span>
+<span id="cb5-3"><a href="unsolved-puzzles-in-task-9.html#cb5-3" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">exit</span>()</span>
+<span id="cb5-4"><a href="unsolved-puzzles-in-task-9.html#cb5-4" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">transition</span>()</span>
+<span id="cb5-5"><a href="unsolved-puzzles-in-task-9.html#cb5-5" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> w)</span>
+<span id="cb5-6"><a href="unsolved-puzzles-in-task-9.html#cb5-6" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> h)</span>
+<span id="cb5-7"><a href="unsolved-puzzles-in-task-9.html#cb5-7" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">remove</span>()</span></code></pre></div>
 <script type="text/javascript">
 svg.selectAll("rect")
                 .data(dataset)

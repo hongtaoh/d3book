@@ -23,7 +23,7 @@ From [Day 8](https://observablehq.com/@hongtaoh/spet-1-2020-day-eight)
 
 - 6-2-3, `var svg = d3.select("body").append("svg")`, what does this line of code do?
 
-- 6-2-4, Draw five circles, the x-pistion value of each circle's center is (index * 50) + 25, the y-position is half of the pre-defined height, and the value of the radius is the data value itself; 
+- 6-2-4, Draw five circles, the x-position value of each circle's center is (index * 50) + 25, the y-position is half of the pre-defined height, and the value of the radius is the data value itself; 
 
 - 6-2-5, Fill the five circles with "yellow", the stroke being "orange", and the stroke width is half of the corresponding data values;
 
@@ -38,7 +38,7 @@ From [Day 8](https://observablehq.com/@hongtaoh/spet-1-2020-day-eight)
 
 - 6-3-3. Now, instead of creating `divs`, we'll be creating `rect` s. Create 20 `rect` s, each with x =0, y=0, width = 20, height = 100;
 
-- 6-3-4. Set the `x` to be dynamic, such that the ith rect has a x of `i*21`;
+- 6-3-4. Set the `x` to be dynamic, such that the $i$th rect has an `x` of `i*21`;
 
 - 6-3-5. Set the `x` to be flexible, such that each x = i * (w / dataset.length); Set the `width` of each rect to be flexible as well, each `width = w / dataset.length - 1`;
 
@@ -48,7 +48,7 @@ From [Day 8](https://observablehq.com/@hongtaoh/spet-1-2020-day-eight)
 
 - 6-3-8. Change `d` to be `d * 4`;
 
-- 6-3-9. Chagee the bar color to `teal`.
+- 6-3-9. Change the bar color to `teal`.
 
 ## Task 6-4: Change bar color
 From [Day 9](https://observablehq.com/@hongtaoh/day-nine-spet-2-2020)

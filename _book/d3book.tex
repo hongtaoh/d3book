@@ -111,40 +111,8 @@
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
 
-\newenvironment{rmdblock}[1]
-  {
-  \begin{itemize}
-  \renewcommand{\labelitemi}{
-    \raisebox{-.7\height}[0pt][0pt]{
-      {\setkeys{Gin}{width=3em,keepaspectratio}\includegraphics{images/#1}}
-    }
-  }
-  \setlength{\fboxsep}{1em}
-  \begin{kframe}
-  \item
-  }
-  {
-  \end{kframe}
-  \end{itemize}
-  }
-\newenvironment{rmdnote}
-  {\begin{rmdblock}{note}}
-  {\end{rmdblock}}
-\newenvironment{rmdcaution}
-  {\begin{rmdblock}{caution}}
-  {\end{rmdblock}}
-\newenvironment{rmdimportant}
-  {\begin{rmdblock}{important}}
-  {\end{rmdblock}}
-\newenvironment{rmdtip}
-  {\begin{rmdblock}{tip}}
-  {\end{rmdblock}}
-\newenvironment{rmdwarning}
-  {\begin{rmdblock}{warning}}
-  {\end{rmdblock}}
-
-\usepackage{makeidx}
-\makeindex
+% \usepackage{makeidx}
+% \makeindex
 
 \urlstyle{tt}
 
@@ -165,7 +133,7 @@
 
 \title{B3book Companion}
 \author{Hongtao Hao}
-\date{2020-12-01}
+\date{2021-01-21}
 
 \begin{document}
 \maketitle
@@ -183,6 +151,10 @@ D3 is hard, literally. Its learning curve is not fun. The key to mastering it, I
 Therefore, I documented the codes' objectives in the book, i.e., what the codes in the book aimed to achieve. Then I used these prompts to train myself. I found them useful so I decided to share these prompts through this website.
 
 If you can achieve all of what these prompts asked you to do, then you don't need to read the whole book again.
+
+\begin{verbatim}
+## Loading required package: bookdownplus
+\end{verbatim}
 
 \mainmatter
 
@@ -289,7 +261,7 @@ From \href{https://observablehq.com/@hongtaoh/spet-1-2020-day-eight}{Day 8}
 \item
   6-3-3. Now, instead of creating \texttt{divs}, we'll be creating \texttt{rect} s. Create 20 \texttt{rect} s, each with x =0, y=0, width = 20, height = 100;
 \item
-  6-3-4. Set the \texttt{x} to be dynamic, such that the ith rect has a x of \texttt{i*21};
+  6-3-4. Set the \texttt{x} to be dynamic, such that the \(i\)th rect has an \texttt{x} of \texttt{i*21};
 \item
   6-3-5. Set the \texttt{x} to be flexible, such that each x = i * (w / dataset.length); Set the \texttt{width} of each rect to be flexible as well, each \texttt{width\ =\ w\ /\ dataset.length\ -\ 1};
 \item
@@ -299,7 +271,7 @@ From \href{https://observablehq.com/@hongtaoh/spet-1-2020-day-eight}{Day 8}
 \item
   6-3-8. Change \texttt{d} to be \texttt{d\ *\ 4};
 \item
-  6-3-9. Chagee the bar color to \texttt{teal}.
+  6-3-9. Change the bar color to \texttt{teal}.
 \end{itemize}
 
 \hypertarget{task-6-4-change-bar-color}{%
@@ -1274,7 +1246,7 @@ Background knowledge:
 \begin{itemize}
 \tightlist
 \item
-  I tried the Scott Murray's \href{https://github.com/scotthmurray/d3-book/blob/master/chapter_10/13_svg_tooltip.html}{codes} implementing SVG element tooltips, but they didn't work. \href{https://github.com/scotthmurray/d3-book/issues/47}{Here} is the solution to this problem.
+  I tried Scott Murray's \href{https://github.com/scotthmurray/d3-book/blob/master/chapter_10/13_svg_tooltip.html}{codes} implementing SVG element tooltips, but they didn't work. \href{https://github.com/scotthmurray/d3-book/issues/47}{Here} is the solution to this problem.
 \end{itemize}
 
 \hypertarget{unsolved-puzzles-in-task-10}{%

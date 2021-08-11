@@ -24,7 +24,7 @@
 <meta name="author" content="Hongtao Hao" />
 
 
-<meta name="date" content="2020-12-01" />
+<meta name="date" content="2021-01-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -282,15 +282,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>9-2-7. You can add many transitions you want. However, you cannot add a transition within in <code>.on("start", ...)</code>, which is designed for immediate transformations, not interpolated ones.</p></li>
 </ul>
 <p>For example, the following is okay:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="task-9-2-review.html#cb5-1" aria-hidden="true" tabindex="-1"></a>svg<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;circle&quot;</span>)</span>
-<span id="cb5-2"><a href="task-9-2-review.html#cb5-2" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span><span class="fu">data</span>(dataset)</span>
-<span id="cb5-3"><a href="task-9-2-review.html#cb5-3" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span><span class="fu">transtion</span>()</span>
-<span id="cb5-4"><a href="task-9-2-review.html#cb5-4" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span><span class="fu">duration</span>(<span class="dv">1000</span>)</span>
-<span id="cb5-5"><a href="task-9-2-review.html#cb5-5" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span><span class="fu">transition</span>()</span>
-<span id="cb5-6"><a href="task-9-2-review.html#cb5-6" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span><span class="fu">duration</span>(<span class="dv">1000</span>)</span>
-<span id="cb5-7"><a href="task-9-2-review.html#cb5-7" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span></span>
-<span id="cb5-8"><a href="task-9-2-review.html#cb5-8" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span></span>
-<span id="cb5-9"><a href="task-9-2-review.html#cb5-9" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="task-9-2-review.html#cb6-1" aria-hidden="true" tabindex="-1"></a>svg<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;circle&quot;</span>)</span>
+<span id="cb6-2"><a href="task-9-2-review.html#cb6-2" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span><span class="fu">data</span>(dataset)</span>
+<span id="cb6-3"><a href="task-9-2-review.html#cb6-3" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span><span class="fu">transtion</span>()</span>
+<span id="cb6-4"><a href="task-9-2-review.html#cb6-4" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span><span class="fu">duration</span>(<span class="dv">1000</span>)</span>
+<span id="cb6-5"><a href="task-9-2-review.html#cb6-5" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span><span class="fu">transition</span>()</span>
+<span id="cb6-6"><a href="task-9-2-review.html#cb6-6" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span><span class="fu">duration</span>(<span class="dv">1000</span>)</span>
+<span id="cb6-7"><a href="task-9-2-review.html#cb6-7" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span></span>
+<span id="cb6-8"><a href="task-9-2-review.html#cb6-8" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span></span>
+<span id="cb6-9"><a href="task-9-2-review.html#cb6-9" aria-hidden="true" tabindex="-1"></a>     <span class="op">.</span></span></code></pre></div>
 <script type="text/javascript">
 svg.selectAll("circle")
      .data(dataset)

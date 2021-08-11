@@ -24,7 +24,7 @@
 <meta name="author" content="Hongtao Hao" />
 
 
-<meta name="date" content="2020-12-01" />
+<meta name="date" content="2021-01-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -278,13 +278,13 @@ From <a href="https://observablehq.com/@hongtaoh/day-thirteen-2020-09-06">Day 13
 <p><code>var dataset_01 = [4, 5, 9, 10, 24, 56]</code></p>
 <p><code>d3.max(dataset_01)  //56</code></p>
 <p>However, things get a little bit more complicated when the dataset is two dimensional: an array of arrays. Simply put the dataset into <code>d3.max()</code> won’t give us the largest number.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="task7.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> dataset_02 <span class="op">=</span> [</span>
-<span id="cb1-2"><a href="task7.html#cb1-2" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">0</span><span class="op">,</span> <span class="dv">4</span>]<span class="op">,</span> [<span class="dv">5</span><span class="op">,</span> <span class="dv">9</span>]<span class="op">,</span> [<span class="dv">8</span><span class="op">,</span> <span class="dv">90</span>]<span class="op">,</span> [<span class="dv">47</span><span class="op">,</span> <span class="dv">33</span>]<span class="op">,</span> [<span class="dv">55</span><span class="op">,</span><span class="dv">99</span>]</span>
-<span id="cb1-3"><a href="task7.html#cb1-3" aria-hidden="true" tabindex="-1"></a>  ]</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="task7.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> dataset_02 <span class="op">=</span> [</span>
+<span id="cb2-2"><a href="task7.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">0</span><span class="op">,</span> <span class="dv">4</span>]<span class="op">,</span> [<span class="dv">5</span><span class="op">,</span> <span class="dv">9</span>]<span class="op">,</span> [<span class="dv">8</span><span class="op">,</span> <span class="dv">90</span>]<span class="op">,</span> [<span class="dv">47</span><span class="op">,</span> <span class="dv">33</span>]<span class="op">,</span> [<span class="dv">55</span><span class="op">,</span><span class="dv">99</span>]</span>
+<span id="cb2-3"><a href="task7.html#cb2-3" aria-hidden="true" tabindex="-1"></a>  ]</span></code></pre></div>
 <p><code>d3.max(dataset_02) //[8, 90]</code></p>
 <p>Okay, what should we do then? If we want to identify the largest number among all the first number in each array within <code>dataset_02</code>, we can do it this way:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="task7.html#cb2-1" aria-hidden="true" tabindex="-1"></a>d3<span class="op">.</span><span class="fu">max</span>(dataset_02<span class="op">,</span> <span class="kw">function</span>(d){</span>
-<span id="cb2-2"><a href="task7.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d[<span class="dv">0</span>]<span class="op">;</span>})</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="task7.html#cb3-1" aria-hidden="true" tabindex="-1"></a>d3<span class="op">.</span><span class="fu">max</span>(dataset_02<span class="op">,</span> <span class="kw">function</span>(d){</span>
+<span id="cb3-2"><a href="task7.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> d[<span class="dv">0</span>]<span class="op">;</span>})</span></code></pre></div>
 <p>Here, <code>function(d){return d[0]}</code> is called an <em>accessor function</em>, as it helps us <strong>access</strong> the first number in each array.</p>
 <p>How to understand the above code? I would understand it this way. <code>d3.max()</code> need to first have all the numbers we ask it to evaluate, in the example above, all the first numbers in each array. To get the first numbers, we need to use the accessor function. Then, there is a problem, what does the <code>d</code> mean? <code>d3.max()</code> doesn’t know, so we have to specify that. We tell <code>d3.max()</code> that each <code>d</code> comes from <code>dataset_02</code>, then the stupid <code>d3.max()</code> will know where to find each <code>d</code>.</p>
 </div>
